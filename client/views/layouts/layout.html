@@ -1,5 +1,5 @@
 <Template name="home">
-
+  <!-- Main Container -->
 	<div class="container">
 		<!-- Navbar  -->
 		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
@@ -18,145 +18,31 @@
 						<li class="active"><a href="#">Home</a></li>
 						<li><a href="#about">About</a></li>
 						<li><a href="#contact">Contact</a></li>
+
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
 
-						<li class="dropdown">
-							<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login <b class="caret"></b></a>
-							<!-- test1 -->
-							<ul class="dropdown-menu crowd-drop-down">
-								
-								<form class="form-inline" role="form">
-									<div class="form-group margin-bottom-5">
-										<label class="sr-only" for="exampleInputEmail2">Email address</label>
-										<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Enter email">
-									</div>
-									<div class="form-group margin-bottom-5">
-										<label class="sr-only" for="exampleInputPassword2">Password</label>
-										<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password">
-									</div>
-									<div class="margin-top-10">
+					{{> loginButtons align="right" }} 
 
-										<div class="checkbox">
-											<label>
-												<input type="checkbox"> Remember me
-											</label>
-										</div>
-										<button type="submit" class="btn btn-info">Sign in</button>	
-									</div>
-									
-								</form>
-
-
-								
-								<li class="divider"></li>
-								
-
-
-								<button type="submit" class="btn btn-warning">Sign Up</button>	
-							</ul>
-
-
-						</li>
-
-
-					</ul>
-				</div><!--/.nav-collapse -->
-			</div>
+				</ul>
+			</div><!--/.nav-collapse -->
 		</div>
-
-		<!-- dynamic content start-->
-		<div class="content">
-			
-			<!-- Main component for a primary marketing message or call to action -->
-			<div class="raw">
-				<div class="jumbotron crowd-jumbotron-background">
-					<h1>Crowd-Train</h1>
-					<p>CrowdSourced Train Scheduling Management System</p>
-
-				</div>
-
-
-			</div>
-
-			<!-- Grid System -->
-			<div class="row">
-				<!-- col 8  -->
-				<div class="col-md-8">
-					<!-- Train Schedule Panel-->
-					<div class="panel panel-success">
-						<div class="panel-heading">
-							<h3 class="panel-title">Train Info</h3>
-						</div>
-						<div class="panel-body">
-
-
-							<!-- Schedule Form Panel-->
-							<!-- Schedule Form -->
-							<form class="form-horizontal" role="form">
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label crowd-padding-top-2">I am At</label>
-									<div class="col-sm-10">
-										<select id="selectstart" data-placeholder="Select Start..." class="chosen-select crowd-select-train-start" tabindex="-1">
-
-											<option value="PRP"></option><option value="HYP"></option><option value="WAP"></option><option value="DEC"></option><option value="ABN">ABANPOLA</option><option value="Adagala">ADAGALA</option><option value="ANM">AHANGAMA</option><option value="AUH">AHUNGALLE</option><option value="APR">AKBOPURA</option><option value="AKU">AKURALA</option><option value="AWP">ALAWATUPITIYA</option><option value="ALW">ALAWWA</option><option value="ALT">ALUTHGAMA</option><option value="ABA">AMBALANGODA</option><option value="ABL">AMBEWELA</option><option value="APS">AMBEYPUSSA</option><option value="AVD">ANAWILUNDAWA</option><option value="AND">ANDADOLA</option><option value="AGT">ANGAMPITIYA</option><option value="AGL">ANGULANA</option><option value="ANP">ANURADHAPURA</option><option value="APT">ANURADHAPURA TOWN</option><option value="AKT">ARACHCHIKATTUWA</option><option value="ARW">ARUKKUWATTE</option><option value="ASL">ASELAPURA</option><option value="ASG">ASGIRIYA</option><option value="AWK">AUKANA</option><option value="AVS">AVISAWELLA</option><option value="BAD">BADULLA</option><option value="BNA">BALANA</option><option value="BPA">BALAPITIYA</option><option value="BPT">BAMBALAPITIYA</option><option value="BDA">BANDARAWELA</option><option value="BGY">BANGADENIYA</option><option value="BSL">BASELINE ROAD</option><option value="BOA">BATTALUOYA</option><option value="BCO">BATTICALOA</option><option value="BTU">BATUWATTE</option><option value="BEM">BEMMULLA</option><option value="BNT">BENTOTA</option><option value="BRL">BERUWALA</option><option value="BLT">BOLAWATTE</option><option value="BSH">BOOSSA</option><option value="BSA">BORELESSA</option><option value="BTL">BOTALE</option><option value="BGH">BULUGAHAGODA</option><option value="BJM">BUTHGAMUWA</option><option value="CDK">CHEDDIKULAM</option><option value="CHL">CHILAW</option><option value="CBY">CHINA BEY</option><option value="FOT">COLOMBO FORT</option><option value="CLY">COLOMBO YARD</option><option value="CRD">COTTA ROAD</option><option value="DRL">DARALUWA</option><option value="DWL">DEHIWALA</option><option value="DEKINDA">DEKINDA</option><option value="DAG">DEMATAGODA</option><option value="DDR">DEMODARA</option><option value="DPM">DEWAPURAM</option><option value="Dewedda">DEWEDDA</option><option value="DLA">DIYATALAWA</option><option value="DNA">DODANDUWA</option><option value="EYA">EGODA UYANA</option><option value="EPS">ELIPHANT PASS</option><option value="ELL">ELLE</option><option value="EDM">ENDERAMULLA</option><option value="EKM">ERATTAPERIYAKULAM</option><option value="EVR">ERAVUR</option><option value="EPN">ERUKKALAM PENDU</option><option value="IPZ">FREE TRADE ZONE</option><option value="GBD">GALABODA</option><option value="GLM">GALGAMUWA</option><option value="GLE">GALLE</option><option value="GAL">GALLELLA</option><option value="GOA">GALOYA JUNCTION</option><option value="GMA">GAMMANA</option><option value="GPH">GAMPAHA</option><option value="GPL">GAMPOLA</option><option value="GND">GANEGODA</option><option value="GAN">GANEMULLA</option><option value="GNW">GANEWATTE</option><option value="GDA">GANGODA</option><option value="GTL">GANTALAWA</option><option value="GEY">GELIOYA</option><option value="GNT">GINTHOTA</option><option value="GRB">GIRAMBE</option><option value="GGA">GODAGAMA</option><option value="GWN">GREAT WESTERN</option><option value="HBD">HABARADUWA</option><option value="HBN">HABARANA</option><option value="Hadirawalana">HADIRAWALANA</option><option value="HEA">HALIELA</option><option value="HPT">HAPUTALE</option><option value="HAU">HATAMUNA</option><option value="HKT">HATARAS KOTUWA</option><option value="HTN">HATTON</option><option value="HLO">HEEL OYA</option><option value="HDP">HEENDENIYA</option><option value="HML">HETTIMULLA</option><option value="HKD">HIKKADUWA</option><option value="HRG">HINGURAKGODA</option><option value="YPP">HIRIYALA</option><option value="HRL">HIRIYALA</option><option value="HMA">HOMAGAMA</option><option value="HHR">HOMAGAMA HOSPITAL</option><option value="HRP">HORAPE</option><option value="HLA">HORIWIALA</option><option value="HUN">HUNUPITIYA</option><option value="IGH">IDALGASINNA</option><option value="IHA">IHALAGAMA</option><option value="IKT">IHALAKOTTE</option><option value="IWL">IHALAWATAWALA</option><option value="IDA">INDURUWA</option><option value="INO">INGURUOYA</option><option value="JLA">JA-ELA</option><option value="JAP">JAYANTHIPURA</option><option value="KDN">KADADASI NAGAR</option><option value="KMA">KADIGAMUWA</option><option value="KGW">KADUGANNAWA</option><option value="KDG">KADUGODA</option><option value="KWE">KAHAWA</option><option value="KYA">KAKKAPALLIYA</option><option value="KLW">KALAWEWA</option><option value="KKH">KALKUDAH</option><option value="KTN">KALUTARA NORTH</option><option value="KTS">KALUTARA SOUTH</option><option value="KMG">KAMBURUGAMUWA</option><option value="KAN">KANDANA</option><option value="KGD">KANDEGODA</option><option value="KDT">KANDY</option><option value="KNI">KANTALE</option><option value="KAW">KAPUWATTE</option><option value="KPL">KARADIPUWAL</option><option value="KTL">KATHALUWA</option><option value="KAT">KATTUWA</option><option value="KTG">KATUGASTOTA</option><option value="KTR">KATUGASTOTA ROAD</option><option value="KUG">KATUGODA</option><option value="KKD">KATUKURUNDA</option><option value="CAK">KATUNAYAKA AIRPORT</option><option value="KTK">KATUNAYAKE</option><option value="KEN">KEENAWALA</option><option value="KRA">KEKIRAWA</option><option value="KLA">KELANIYA</option><option value="KOC">KILINOCHCHI</option><option value="KNM">KINIGAMA</option><option value="KPE">KIRULAPANA</option><option value="KEL">KITAL ELLE</option><option value="KCH">KOCHCHIKADE</option><option value="KOG">KOGGALA</option><option value="Kohonbiliwal;a">KOHONBILIWALA</option><option value="KLP">KOLLUPITIYA</option><option value="KLN">KOLONNAWA</option><option value="KPN">KOMPANNAVEDIYA</option><option value="KON">KONWEWA</option><option value="KOR">KORALAWELLA</option><option value="KSG">KOSGAMA</option><option value="KDA">KOSGODA</option><option value="KHA">KOSHINNA</option><option value="KGA">KOTAGALA</option><option value="KOT">KOTTAWA</option><option value="KWW">KUDA WAWA</option><option value="KUD">KUDAHAKAPOLA</option><option value="KMK">KUMARAKANDA</option><option value="KMB">KUMBALGAMA</option><option value="Kurahanhenagama">KURAHANHENAGAMA</option><option value="KUR">KURANA</option><option value="KRN">KURUNEGALA</option><option value="LYA">LAKSAUYANA</option><option value="LGM">LIYANAGEMULLA</option><option value="LIYANWALA">LIYANWALA</option><option value="LNA">LUNAWA</option><option value="LWL">LUNUWAILA</option><option value="MPA">MADAMPAGAMA</option><option value="MDP">MADAMPE</option><option value="MRD">MADHU ROAD</option><option value="MKI">MADURANKULIYA</option><option value="MGG">MAGELEGODA</option><option value="MGN">MAGGONA</option><option value="MYA">MAHAIYAWA</option><option value="MAG">MAHARAGAMA</option><option value="MHO">MAHO</option><option value="MPL">MALAPALLE</option><option value="MPT">MANAMPITIYA</option><option value="MGE">MANGALAELIYA</option><option value="MKM">MANKULAM</option><option value="MNR">MANNAR</option><option value="MNG">MANUWANGAMA</option><option value="MDA">MARADANA</option><option value="Maraluwewa">MARALUWEWA</option><option value="MTL">MATALE</option><option value="MTR">MATARA</option><option value="MTM">MATTOTAM</option><option value="MVD">MAWILMADA</option><option value="MEM">MEDAGAMA</option><option value="MWH">MEDAWACHCHIYA</option><option value="Medegama">MEDEGAMA</option><option value="Meegasmana">MEEGASMANA</option><option value="MGD">MEEGODA</option><option value="MWA">MHA INDURUWA</option><option value="MED">MIDIGAMA</option><option value="MHN">MIHINTALE</option><option value="MHJ">MIHINTALE JUNCTION</option><option value="MIY">MINNERIYA</option><option value="MIR">MIRIGAMA</option><option value="Mihihanpitigama">MIRIHANPITIGAMA</option><option value="MIS">MIRISSA</option><option value="MLP">MOLLIPATANA</option><option value="MLG">MORAGOLLAGAMA</option><option value="MKP">MORAKELE</option><option value="Morakona">MORAKONA</option><option value="MRT">MORATUWA</option><option value="MLV">MOUNT LAVINIYA</option><option value="MNL">MUNDAL</option><option value="MRK">MURIKANDY</option><option value="MKN">MURUNKAN</option><option value="MTG">MUTHTHETTUGALA</option><option value="NAG">NAGOLLAGAMA</option><option value="NLY">NAILIYA</option><option value="NOA">NANUOYA</option><option value="NHP">NARAHENPITA</option><option value="NAT">NATTANDIYA</option><option value="NVP">NAWALAPITIYA</option><option value="NWN">NAWINNA</option><option value="NGM">NEGAMA</option><option value="NGB">NEGOMBO</option><option value="Nelumpathgama">NELUMPATHGAMA</option><option value="NPK">NELUMPOKUNA</option><option value="NYK">NERIYAKULAM</option><option value="NOR">NOORANAGAR</option><option value="NUG">NUGEGODA</option><option value="OHA">OHIYA</option><option value="OMT">OMANTHAI</option><option value="PDK">PADUKKA</option><option value="Pahalawardhana">PAHALAWARDHANA</option><option value="PVI">PALAVI</option><option value="PAL">PALLAI</option><option value="Pallethalavinna">PALLETALAVINNA</option><option value="PLL">PALLEWALA</option><option value="PUW">PALUGASWEWA</option><option value="PND">PANADURA</option><option value="PNG">PANAGODA</option><option value="PNL">PANALEEYA</option><option value="PRW">PANGIRIWATTA</option><option value="PAN">PANNIPITIYA</option><option value="PKU">PARAKUMPURA</option><option value="PRN">PARANTHAN</option><option value="PHW">PARASANGAHAWEWA</option><option value="PGD">PATAGAMGODA</option><option value="PTP">PATHANPHA</option><option value="PPL">PATTIPOLA</option><option value="PGN">PAYAGALA NORTH</option><option value="PGS">PAYAGALA SOUTH</option><option value="PDA">PERADENIYA</option><option value="PKP">PERAKUMPURA</option><option value="PRL">PERALANDA</option><option value="PNV">PERIYANAGAVILLU</option><option value="PLD">PILIDUWA</option><option value="PLT">PILIMATALAWA</option><option value="Pinnagolla">PINNAGOLLA</option><option value="PNW">PINNAWALA</option><option value="PIN">PINWATTE</option><option value="PGM">PIYADIGAMA</option><option value="PYA">PIYAGAMA</option><option value="PLG">POLGAHAWELA</option><option value="PLN">POLONNARUWA</option><option value="PLR">POLWATHUMODARA</option><option value="PON">POONEWA</option><option value="Porapola">PORAPOLA</option><option value="Porapola Juc.">PORAPOLA JUNC.</option><option value="PTA">POTUHERA</option><option value="PCK">PULACHCHIKULAM</option><option value="PKM">PULIYANKULAM</option><option value="PNI">PUNANI</option><option value="PTM">PUTTALAM</option><option value="PWP">PUWAKPITIYA</option><option value="RDL">RADELLA</option><option value="RGM">RAGAMA</option><option value="RBK">RAMBUKKANA</option><option value="RMA">RANAMUGGAMUWA</option><option value="RGA">RANDENIGAMA</option><option value="RTG">RATHGAMA</option><option value="RML">RATMALANA</option><option value="RDT">REDEETHENNA</option><option value="RCH">RICHMOND HILL</option><option value="RZL">ROSELLA</option><option value="SAL">SALIYAPURA</option><option value="SUA">SARASAVIUYANA</option><option value="SWR">SAWARANA</option><option value="SCR">SECRETARTAT HALT</option><option value="SED">SEEDUWA</option><option value="SMA">SEENIGAMA</option><option value="SGM">SENARATHGAMA</option><option value="SVP">SEVANAPITIYA</option><option value="Siyabalagahawewa">SIYABALAGAHAWEWA</option><option value="SYA">SIYALANGAMUWA</option><option value="SRP">SRAWASTHIPURA</option><option value="TLA">TALAWA</option><option value="TKL">TALAWAKELE</option><option value="TWG">TALAWATTEGEDARA</option><option value="TAN">TAMPALAPOPLA</option><option value="TWT">TELWATTE</option><option value="TBL">TEMBLIGALA</option><option value="TLP">THALPE</option><option value="Thambagalla">THAMBAGALLA</option><option value="TBM">THAMBUTTEGAMA</option><option value="TDK">THANDIKULAM</option><option value="TDY">THILLADIYA</option><option value="TNA">THIRANAGAMA</option><option value="Thuruliyagama">THURULIYAGAMA</option><option value="TIM">TIMBIRIYAGEDARA</option><option value="TSM">TISMALPOLA</option><option value="TRH">TRAIN HALT 01</option><option value="TCO">TRINCOMALLE</option><option value="TRW">TRIRUKESHWARAM</option><option value="TUD">TUDELLA</option><option value="TDR">TUMMODARA</option><option value="UDL">UDATALAWINNA</option><option value="UWL">UDATHTHAWALA</option><option value="UHM">UDHAMULLA</option><option value="Udugodagama">UDUGODAGAMA</option><option value="UDW">UDUWARA</option><option value="UGL">UGGALLA</option><option value="UKL">UKUWELA</option><option value="ULP">ULAPONE</option><option value="UNW">UNAWATUNA</option><option value="Uyangalla">UYANGALLA</option><option value="VCH">VALACHCHENEI</option><option value="VML">VANDARAMULLAI</option><option value="VNA">VAVUNIYA</option><option value="VGD">VEYANGODA</option><option value="Viralmurippuwa">VIRALMURIPPUWA</option><option value="WDA">WADDUWA</option><option value="WGG">WAGA</option><option value="WKL">WAIKKALA</option><option value="WHP">WALAHAPITIYA</option><option value="Walaswewa">WALASWEWA</option><option value="WLG">WALGAMA</option><option value="WPA">WALPOLA</option><option value="WSL">WANAWASALA</option><option value="WRW">WANDURAWA</option><option value="WTG">WATAGODA</option><option value="WAT">WATAREKA</option><option value="WLA">WATAWALA</option><option value="watawara">WATAWARA</option><option value="WGA">WATTEGAMA</option><option value="WDK">WEEDIKULAM</option><option value="WLM">WELIGAMA</option><option value="WKD">WELIKANDA</option><option value="WEL">WELLAWA</option><option value="WTE">WELLAWATTA</option><option value="Weragala">WERAGALA</option><option value="WRD">WIJAYARAJADAHANA</option><option value="WWT">WILWATTE</option><option value="WKA">WLAKUBURA</option><option value="YGD">YAGODA</option><option value="YPW">YAPAHUWA</option><option value="YGM">YATAGAMA</option><option value="YATAWARA">YATAWARA</option><option value="YATIRAWANA">YATIRAWANA</option><option value="YTG">YATTALGODA</option><option value="elwala">්ELWALA</option> 
-
-										</select>
-									</div>
-								</div>
-
-								<div class="form-group">
-									<label class="col-sm-2 control-label crowd-padding-top-2">Want to goto</label>
-									<div class="col-sm-10">
-										<select id="selectdestination" data-placeholder="Select Destination..." class="chosen-select crowd-select-train-start" tabindex="-1">
-
-											<option value="PRP"></option><option value="HYP"></option><option value="WAP"></option><option value="DEC"></option><option value="ABN">ABANPOLA</option><option value="Adagala">ADAGALA</option><option value="ANM">AHANGAMA</option><option value="AUH">AHUNGALLE</option><option value="APR">AKBOPURA</option><option value="AKU">AKURALA</option><option value="AWP">ALAWATUPITIYA</option><option value="ALW">ALAWWA</option><option value="ALT">ALUTHGAMA</option><option value="ABA">AMBALANGODA</option><option value="ABL">AMBEWELA</option><option value="APS">AMBEYPUSSA</option><option value="AVD">ANAWILUNDAWA</option><option value="AND">ANDADOLA</option><option value="AGT">ANGAMPITIYA</option><option value="AGL">ANGULANA</option><option value="ANP">ANURADHAPURA</option><option value="APT">ANURADHAPURA TOWN</option><option value="AKT">ARACHCHIKATTUWA</option><option value="ARW">ARUKKUWATTE</option><option value="ASL">ASELAPURA</option><option value="ASG">ASGIRIYA</option><option value="AWK">AUKANA</option><option value="AVS">AVISAWELLA</option><option value="BAD">BADULLA</option><option value="BNA">BALANA</option><option value="BPA">BALAPITIYA</option><option value="BPT">BAMBALAPITIYA</option><option value="BDA">BANDARAWELA</option><option value="BGY">BANGADENIYA</option><option value="BSL">BASELINE ROAD</option><option value="BOA">BATTALUOYA</option><option value="BCO">BATTICALOA</option><option value="BTU">BATUWATTE</option><option value="BEM">BEMMULLA</option><option value="BNT">BENTOTA</option><option value="BRL">BERUWALA</option><option value="BLT">BOLAWATTE</option><option value="BSH">BOOSSA</option><option value="BSA">BORELESSA</option><option value="BTL">BOTALE</option><option value="BGH">BULUGAHAGODA</option><option value="BJM">BUTHGAMUWA</option><option value="CDK">CHEDDIKULAM</option><option value="CHL">CHILAW</option><option value="CBY">CHINA BEY</option><option value="FOT">COLOMBO FORT</option><option value="CLY">COLOMBO YARD</option><option value="CRD">COTTA ROAD</option><option value="DRL">DARALUWA</option><option value="DWL">DEHIWALA</option><option value="DEKINDA">DEKINDA</option><option value="DAG">DEMATAGODA</option><option value="DDR">DEMODARA</option><option value="DPM">DEWAPURAM</option><option value="Dewedda">DEWEDDA</option><option value="DLA">DIYATALAWA</option><option value="DNA">DODANDUWA</option><option value="EYA">EGODA UYANA</option><option value="EPS">ELIPHANT PASS</option><option value="ELL">ELLE</option><option value="EDM">ENDERAMULLA</option><option value="EKM">ERATTAPERIYAKULAM</option><option value="EVR">ERAVUR</option><option value="EPN">ERUKKALAM PENDU</option><option value="IPZ">FREE TRADE ZONE</option><option value="GBD">GALABODA</option><option value="GLM">GALGAMUWA</option><option value="GLE">GALLE</option><option value="GAL">GALLELLA</option><option value="GOA">GALOYA JUNCTION</option><option value="GMA">GAMMANA</option><option value="GPH">GAMPAHA</option><option value="GPL">GAMPOLA</option><option value="GND">GANEGODA</option><option value="GAN">GANEMULLA</option><option value="GNW">GANEWATTE</option><option value="GDA">GANGODA</option><option value="GTL">GANTALAWA</option><option value="GEY">GELIOYA</option><option value="GNT">GINTHOTA</option><option value="GRB">GIRAMBE</option><option value="GGA">GODAGAMA</option><option value="GWN">GREAT WESTERN</option><option value="HBD">HABARADUWA</option><option value="HBN">HABARANA</option><option value="Hadirawalana">HADIRAWALANA</option><option value="HEA">HALIELA</option><option value="HPT">HAPUTALE</option><option value="HAU">HATAMUNA</option><option value="HKT">HATARAS KOTUWA</option><option value="HTN">HATTON</option><option value="HLO">HEEL OYA</option><option value="HDP">HEENDENIYA</option><option value="HML">HETTIMULLA</option><option value="HKD">HIKKADUWA</option><option value="HRG">HINGURAKGODA</option><option value="YPP">HIRIYALA</option><option value="HRL">HIRIYALA</option><option value="HMA">HOMAGAMA</option><option value="HHR">HOMAGAMA HOSPITAL</option><option value="HRP">HORAPE</option><option value="HLA">HORIWIALA</option><option value="HUN">HUNUPITIYA</option><option value="IGH">IDALGASINNA</option><option value="IHA">IHALAGAMA</option><option value="IKT">IHALAKOTTE</option><option value="IWL">IHALAWATAWALA</option><option value="IDA">INDURUWA</option><option value="INO">INGURUOYA</option><option value="JLA">JA-ELA</option><option value="JAP">JAYANTHIPURA</option><option value="KDN">KADADASI NAGAR</option><option value="KMA">KADIGAMUWA</option><option value="KGW">KADUGANNAWA</option><option value="KDG">KADUGODA</option><option value="KWE">KAHAWA</option><option value="KYA">KAKKAPALLIYA</option><option value="KLW">KALAWEWA</option><option value="KKH">KALKUDAH</option><option value="KTN">KALUTARA NORTH</option><option value="KTS">KALUTARA SOUTH</option><option value="KMG">KAMBURUGAMUWA</option><option value="KAN">KANDANA</option><option value="KGD">KANDEGODA</option><option value="KDT">KANDY</option><option value="KNI">KANTALE</option><option value="KAW">KAPUWATTE</option><option value="KPL">KARADIPUWAL</option><option value="KTL">KATHALUWA</option><option value="KAT">KATTUWA</option><option value="KTG">KATUGASTOTA</option><option value="KTR">KATUGASTOTA ROAD</option><option value="KUG">KATUGODA</option><option value="KKD">KATUKURUNDA</option><option value="CAK">KATUNAYAKA AIRPORT</option><option value="KTK">KATUNAYAKE</option><option value="KEN">KEENAWALA</option><option value="KRA">KEKIRAWA</option><option value="KLA">KELANIYA</option><option value="KOC">KILINOCHCHI</option><option value="KNM">KINIGAMA</option><option value="KPE">KIRULAPANA</option><option value="KEL">KITAL ELLE</option><option value="KCH">KOCHCHIKADE</option><option value="KOG">KOGGALA</option><option value="Kohonbiliwal;a">KOHONBILIWALA</option><option value="KLP">KOLLUPITIYA</option><option value="KLN">KOLONNAWA</option><option value="KPN">KOMPANNAVEDIYA</option><option value="KON">KONWEWA</option><option value="KOR">KORALAWELLA</option><option value="KSG">KOSGAMA</option><option value="KDA">KOSGODA</option><option value="KHA">KOSHINNA</option><option value="KGA">KOTAGALA</option><option value="KOT">KOTTAWA</option><option value="KWW">KUDA WAWA</option><option value="KUD">KUDAHAKAPOLA</option><option value="KMK">KUMARAKANDA</option><option value="KMB">KUMBALGAMA</option><option value="Kurahanhenagama">KURAHANHENAGAMA</option><option value="KUR">KURANA</option><option value="KRN">KURUNEGALA</option><option value="LYA">LAKSAUYANA</option><option value="LGM">LIYANAGEMULLA</option><option value="LIYANWALA">LIYANWALA</option><option value="LNA">LUNAWA</option><option value="LWL">LUNUWAILA</option><option value="MPA">MADAMPAGAMA</option><option value="MDP">MADAMPE</option><option value="MRD">MADHU ROAD</option><option value="MKI">MADURANKULIYA</option><option value="MGG">MAGELEGODA</option><option value="MGN">MAGGONA</option><option value="MYA">MAHAIYAWA</option><option value="MAG">MAHARAGAMA</option><option value="MHO">MAHO</option><option value="MPL">MALAPALLE</option><option value="MPT">MANAMPITIYA</option><option value="MGE">MANGALAELIYA</option><option value="MKM">MANKULAM</option><option value="MNR">MANNAR</option><option value="MNG">MANUWANGAMA</option><option value="MDA">MARADANA</option><option value="Maraluwewa">MARALUWEWA</option><option value="MTL">MATALE</option><option value="MTR">MATARA</option><option value="MTM">MATTOTAM</option><option value="MVD">MAWILMADA</option><option value="MEM">MEDAGAMA</option><option value="MWH">MEDAWACHCHIYA</option><option value="Medegama">MEDEGAMA</option><option value="Meegasmana">MEEGASMANA</option><option value="MGD">MEEGODA</option><option value="MWA">MHA INDURUWA</option><option value="MED">MIDIGAMA</option><option value="MHN">MIHINTALE</option><option value="MHJ">MIHINTALE JUNCTION</option><option value="MIY">MINNERIYA</option><option value="MIR">MIRIGAMA</option><option value="Mihihanpitigama">MIRIHANPITIGAMA</option><option value="MIS">MIRISSA</option><option value="MLP">MOLLIPATANA</option><option value="MLG">MORAGOLLAGAMA</option><option value="MKP">MORAKELE</option><option value="Morakona">MORAKONA</option><option value="MRT">MORATUWA</option><option value="MLV">MOUNT LAVINIYA</option><option value="MNL">MUNDAL</option><option value="MRK">MURIKANDY</option><option value="MKN">MURUNKAN</option><option value="MTG">MUTHTHETTUGALA</option><option value="NAG">NAGOLLAGAMA</option><option value="NLY">NAILIYA</option><option value="NOA">NANUOYA</option><option value="NHP">NARAHENPITA</option><option value="NAT">NATTANDIYA</option><option value="NVP">NAWALAPITIYA</option><option value="NWN">NAWINNA</option><option value="NGM">NEGAMA</option><option value="NGB">NEGOMBO</option><option value="Nelumpathgama">NELUMPATHGAMA</option><option value="NPK">NELUMPOKUNA</option><option value="NYK">NERIYAKULAM</option><option value="NOR">NOORANAGAR</option><option value="NUG">NUGEGODA</option><option value="OHA">OHIYA</option><option value="OMT">OMANTHAI</option><option value="PDK">PADUKKA</option><option value="Pahalawardhana">PAHALAWARDHANA</option><option value="PVI">PALAVI</option><option value="PAL">PALLAI</option><option value="Pallethalavinna">PALLETALAVINNA</option><option value="PLL">PALLEWALA</option><option value="PUW">PALUGASWEWA</option><option value="PND">PANADURA</option><option value="PNG">PANAGODA</option><option value="PNL">PANALEEYA</option><option value="PRW">PANGIRIWATTA</option><option value="PAN">PANNIPITIYA</option><option value="PKU">PARAKUMPURA</option><option value="PRN">PARANTHAN</option><option value="PHW">PARASANGAHAWEWA</option><option value="PGD">PATAGAMGODA</option><option value="PTP">PATHANPHA</option><option value="PPL">PATTIPOLA</option><option value="PGN">PAYAGALA NORTH</option><option value="PGS">PAYAGALA SOUTH</option><option value="PDA">PERADENIYA</option><option value="PKP">PERAKUMPURA</option><option value="PRL">PERALANDA</option><option value="PNV">PERIYANAGAVILLU</option><option value="PLD">PILIDUWA</option><option value="PLT">PILIMATALAWA</option><option value="Pinnagolla">PINNAGOLLA</option><option value="PNW">PINNAWALA</option><option value="PIN">PINWATTE</option><option value="PGM">PIYADIGAMA</option><option value="PYA">PIYAGAMA</option><option value="PLG">POLGAHAWELA</option><option value="PLN">POLONNARUWA</option><option value="PLR">POLWATHUMODARA</option><option value="PON">POONEWA</option><option value="Porapola">PORAPOLA</option><option value="Porapola Juc.">PORAPOLA JUNC.</option><option value="PTA">POTUHERA</option><option value="PCK">PULACHCHIKULAM</option><option value="PKM">PULIYANKULAM</option><option value="PNI">PUNANI</option><option value="PTM">PUTTALAM</option><option value="PWP">PUWAKPITIYA</option><option value="RDL">RADELLA</option><option value="RGM">RAGAMA</option><option value="RBK">RAMBUKKANA</option><option value="RMA">RANAMUGGAMUWA</option><option value="RGA">RANDENIGAMA</option><option value="RTG">RATHGAMA</option><option value="RML">RATMALANA</option><option value="RDT">REDEETHENNA</option><option value="RCH">RICHMOND HILL</option><option value="RZL">ROSELLA</option><option value="SAL">SALIYAPURA</option><option value="SUA">SARASAVIUYANA</option><option value="SWR">SAWARANA</option><option value="SCR">SECRETARTAT HALT</option><option value="SED">SEEDUWA</option><option value="SMA">SEENIGAMA</option><option value="SGM">SENARATHGAMA</option><option value="SVP">SEVANAPITIYA</option><option value="Siyabalagahawewa">SIYABALAGAHAWEWA</option><option value="SYA">SIYALANGAMUWA</option><option value="SRP">SRAWASTHIPURA</option><option value="TLA">TALAWA</option><option value="TKL">TALAWAKELE</option><option value="TWG">TALAWATTEGEDARA</option><option value="TAN">TAMPALAPOPLA</option><option value="TWT">TELWATTE</option><option value="TBL">TEMBLIGALA</option><option value="TLP">THALPE</option><option value="Thambagalla">THAMBAGALLA</option><option value="TBM">THAMBUTTEGAMA</option><option value="TDK">THANDIKULAM</option><option value="TDY">THILLADIYA</option><option value="TNA">THIRANAGAMA</option><option value="Thuruliyagama">THURULIYAGAMA</option><option value="TIM">TIMBIRIYAGEDARA</option><option value="TSM">TISMALPOLA</option><option value="TRH">TRAIN HALT 01</option><option value="TCO">TRINCOMALLE</option><option value="TRW">TRIRUKESHWARAM</option><option value="TUD">TUDELLA</option><option value="TDR">TUMMODARA</option><option value="UDL">UDATALAWINNA</option><option value="UWL">UDATHTHAWALA</option><option value="UHM">UDHAMULLA</option><option value="Udugodagama">UDUGODAGAMA</option><option value="UDW">UDUWARA</option><option value="UGL">UGGALLA</option><option value="UKL">UKUWELA</option><option value="ULP">ULAPONE</option><option value="UNW">UNAWATUNA</option><option value="Uyangalla">UYANGALLA</option><option value="VCH">VALACHCHENEI</option><option value="VML">VANDARAMULLAI</option><option value="VNA">VAVUNIYA</option><option value="VGD">VEYANGODA</option><option value="Viralmurippuwa">VIRALMURIPPUWA</option><option value="WDA">WADDUWA</option><option value="WGG">WAGA</option><option value="WKL">WAIKKALA</option><option value="WHP">WALAHAPITIYA</option><option value="Walaswewa">WALASWEWA</option><option value="WLG">WALGAMA</option><option value="WPA">WALPOLA</option><option value="WSL">WANAWASALA</option><option value="WRW">WANDURAWA</option><option value="WTG">WATAGODA</option><option value="WAT">WATAREKA</option><option value="WLA">WATAWALA</option><option value="watawara">WATAWARA</option><option value="WGA">WATTEGAMA</option><option value="WDK">WEEDIKULAM</option><option value="WLM">WELIGAMA</option><option value="WKD">WELIKANDA</option><option value="WEL">WELLAWA</option><option value="WTE">WELLAWATTA</option><option value="Weragala">WERAGALA</option><option value="WRD">WIJAYARAJADAHANA</option><option value="WWT">WILWATTE</option><option value="WKA">WLAKUBURA</option><option value="YGD">YAGODA</option><option value="YPW">YAPAHUWA</option><option value="YGM">YATAGAMA</option><option value="YATAWARA">YATAWARA</option><option value="YATIRAWANA">YATIRAWANA</option><option value="YTG">YATTALGODA</option><option value="elwala">්ELWALA</option> 
-
-										</select>
-									</div>
-								</div>
-
-
-							</form>
-
-
-
-						</div>
-					</div>
-					<!-- End of panel train scedule -->
-
-				</div>
-				<!-- End of col8 -->
-
-				<!-- col 4 -->
-				<div class="col-md-4">
-					<!-- notification panel -->
-					<div class="panel panel-info">
-						<div class="panel-heading">
-							<h3 class="panel-title">Notifications</h3>
-						</div>
-						<!-- panel body -->
-						<div class="panel-body crowd-notify-scroll">
-							<div class="alert alert-success alert-dismissable">
-								<strong><span class="crowd-notify-train">Train #1</span></strong>will be arrived within 10 mintues <a href="#" class="alert-link">this important alert message</a>.
-							</div>
-							<div class="alert alert-warning alert-dismissable">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-								<strong><span class="crowd-notify-train">Train #2</span></strong> will be delayed.
-							</div>
-							<div class="alert alert-danger alert-dismissable">
-								<button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-								<strong>Warning!</strong> All the trains from Colombo to Badulla Has Canceled !.
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- end of col4 -->
-			</div>
-		<!--end of dynamic content-->
-		</div>
-		<!-- end of grid -->
 	</div>
-  <!-- testing -->
+
+	<!-- Main component for a primary marketing message or call to action -->
+	<div class="row">
+		<div class="jumbotron crowd-jumbotron-background">
+			<div class="crowd-train-logo"></div>
+			
+			<p>CrowdSourced Train Scheduling Management System</p>
+
+		</div>
+
+
+	</div>
+{{> yield}}
+	
+
+</div>
+
 </Template>
