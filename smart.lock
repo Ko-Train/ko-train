@@ -6,7 +6,8 @@
       "iron-router": {},
       "accounts-ui-bootstrap-3": {},
       "npm": {},
-      "select2-bootstrap3-css": {}
+      "select2-bootstrap3-css": {},
+      "router": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -34,10 +35,25 @@
         "tag": "v0.0.5",
         "commit": "ac0c74d4b110c4c5149f17bb33c3e9bb4f77eb88"
       },
+      "router": {
+        "git": "https://github.com/tmeasday/meteor-router.git",
+        "tag": "v0.6.0",
+        "commit": "1e2860138402fb288c2fbce70338161f4d86a5d4"
+      },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
         "tag": "v0.2.2",
         "commit": "8bc53798fe5965669ae67c72f91829fcfdceabfd"
+      },
+      "page-js-ie-support": {
+        "git": "https://github.com/tmeasday/meteor-page-js-ie-support.git",
+        "tag": "v1.3.5",
+        "commit": "b99ed8380aefd10b2afc8f18d9eed4dd0d8ea9cb"
+      },
+      "HTML5-History-API": {
+        "git": "https://github.com/tmeasday/meteor-HTML5-History-API.git",
+        "tag": "v4.0.0",
+        "commit": "dc4965f1424cfca625ec3fbea17eace03f8e32c5"
       }
     }
   }
