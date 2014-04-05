@@ -27,10 +27,11 @@ Meteor.methods({
       }   
     
     }catch(e){
-      console.log('Error occured');
+      console.log('Error occured');6
     }
 
     return result;
   },
-  "BroadCastGCMMessage": BroadCastGCMMessage
+  "BroadCastGCMMessage": BroadCastGCMMessage,
+  "BroadcastSMS": BroadcastSMS,
 }); 
