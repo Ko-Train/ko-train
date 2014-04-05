@@ -1,9 +1,9 @@
 /*crowd-source UI*/
-
+@import url(http://fonts.googleapis.com/css?family=Roboto);
 body{
 
 	margin-top: 60px;
-	font-family: Segoe UI;
+	font-family: 'Roboto', sans-serif;
 }
 
 .crowd-drop-down{
@@ -23,18 +23,99 @@ body{
 
 .crowd-notify-scroll{
 
-	height:250px;overflow-y:auto;
+	height:222px;overflow-y:auto;
 }
 
 .crowd-jumbotron-background{
 
-	background-color: #3483A2;
+	background-color: #19191A;
 	color: #ffffff;
-
-
+	opacity: .8;
 }
 
 .crowd-padding-top-2{
 
 	padding-top: 2px !important;
+}
+
+.crowd-train-logo{
+
+	background: url('../images/crowd-train-logo.png');
+	width: 200px;
+	height: 200px;
+	background-repeat: no-repeat;
+}
+
+.crowd-intro-train-logo{
+
+	background: url('../images/crowd-train-logo.png');
+	
+}
+
+
+body{
+
+	background: url(../images/crowd-background.jpg) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+
+}
+
+.overlay-bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	opacity: 1;
+	background: rgba(0, 0, 0, 0.5);
+	background: -webkit-radial-gradient(25% 2%, ellipse closest-corner, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.5) 100%);
+	background: -moz-radial-gradient(25% 2%, ellipse closest-corner, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.5) 100%);
+	background: -ms-radial-gradient(25% 2%, ellipse closest-corner, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.5) 100%);
+	background: radial-gradient(25% 2%, ellipse closest-corner, rgba(0, 0, 0, 0.5) 1%, rgba(0, 0, 0, 0.5) 100%);
+
+	z-index: 0;
+}
+
+.page-welcome #welcome-messages {
+	margin-top: 35px;
+	width: 100%;
+	overflow: hidden;
+	position: relative;
+	z-index: 123123;
+}
+
+.crowd-center-background{
+
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	max-width: 80%;
+	max-height: 25%;
+	z-index: 10;
+	margin: auto;
+	text-align: center;
+}
+
+.crowd-font-color-white{
+
+	color:#fff
+}
+
+.crowd-modal{
+
+	top:20px;
+}
+.modal{
+	top:20px;
+}
+
+.crowd-margin-left-top{
+
+margin-top: 10px;
+margin-left: 2px;
 }
