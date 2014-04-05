@@ -3,10 +3,15 @@ BroadCastGCMMessage = function(message){
 
   var apiKey = 'AIzaSyA_iYqv4it9XSNm5f_fLY_rMbI1etPnETs';
   var gcm = new GCM(apiKey);
-  console.log(gcm)
+
+  var devices = Androidsubs.find({}, {limit: 990});
+  var regIds = [];
+  devices.forEach(function(d){
+    regIds.push(d.registrationId)
+  });
   
   var message = {
-      registration_id: 'APA91bFT1ghd72KkzNK_SYl1FfgyFg7elp78lJbhTYPhtqIfoO2L84zNGEBojA0fuSJGDX9nY7v8ltiGaYCwLxH56DS_0C-3YWJGqo3jNxpTbC8iqGXHZslX42Hdgcxqi0tCwmO3gUHLkI7TrwqOZxDfKKj0nDQAYQ', // required
+      registration_id: regIds, // required
       collapse_key: "1314", 
       "data.trainId": "1314",
       "data.type": "delayed", // delayed /cancelled
