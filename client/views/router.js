@@ -12,6 +12,6 @@ Router.map(function() {
   this.route('home',{
     path:'/',
     layoutTemplate:"home",
-    template:'shedule',
+    template:'schedule',
   });
 });

@@ -31,5 +31,6 @@ Meteor.methods({
     }
 
     return result;
-  }
+  },
+  "BroadCastGCMMessage": BroadCastGCMMessage
 }); 
