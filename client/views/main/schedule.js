@@ -8,6 +8,11 @@ Template.schedule.stationsList = function () {
   return Session.get('stations');
 }
 
+Template.schedule.rendered = function(){
+  $("#selectstart").chosen({width: "65%"});
+  $("#selectdestination").chosen({width: "65%"});
+}
+
 Template.schedule.events({
   "submit #form-search": function(e){
     e.preventDefault();
