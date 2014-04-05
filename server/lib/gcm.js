@@ -1,4 +1,6 @@
 BroadCastGCMMessage = function(message){
+  this.unblock();
+
   var GCM = Meteor.require('gcm').GCM;
 
   var apiKey = 'AIzaSyA_iYqv4it9XSNm5f_fLY_rMbI1etPnETs';

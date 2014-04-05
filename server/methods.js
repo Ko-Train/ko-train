@@ -31,7 +31,7 @@ Meteor.methods({
       }   
     
     }catch(e){
-      console.log('Error occured');6
+      console.log('Error occured');
     }
 
     return result;
