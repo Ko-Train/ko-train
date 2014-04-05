@@ -2,9 +2,9 @@
   "packages": {
     "bootstrap-3": {},
     "iron-router": {},
-    "accounts-ui-bootstrap-3": {},
     "npm": {},
     "select2-bootstrap3-css": {},
-    "collection-api": {}
+    "collection-api": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }

@@ -1,0 +1,40 @@
+/*crowd-source UI*/
+
+body{
+
+	margin-top: 60px;
+	font-family: Segoe UI;
+}
+
+.crowd-drop-down{
+	min-width: 211px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.margin-top-10{
+
+	margin-top: 10px;
+}
+
+.margin-bottom-5{
+	margin-bottom:5px !important;
+}
+
+.crowd-notify-scroll{
+
+	height:250px;overflow-y:auto;
+}
+
+.crowd-jumbotron-background{
+
+	background-color: #3483A2;
+	color: #ffffff;
+
+
+}
+
+.crowd-padding-top-2{
+
+	padding-top: 2px !important;
+}
