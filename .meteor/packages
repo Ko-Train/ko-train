@@ -4,5 +4,8 @@
 # but you can also edit it by hand.
 
 standard-app-packages
-autopublish
-insecure
+bootstrap-3
+iron-router
+accounts-ui-bootstrap-3
+accounts-facebook
+accounts-twitter
