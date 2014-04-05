@@ -6,7 +6,7 @@ BroadCastGCMMessage = function(message){
   console.log(gcm)
   
   var message = {
-      registration_id: 'APA91bH4dxvUuiFzfhnxIHVkP0lQvcTWyreC1JDdcnIXMvvvySdsoGhURy7h6FEUOTP406904vrrS6K6v2EnEevClJcQfaYlGZqB7Vl88cn_Pm1waQ3U74uhbeazRbM346qTKH0uWhBlIZjhN2WBQN3F5Jy1S6EuddizKTCs-oyIa-Qrxmhnays', // required
+      registration_id: 'APA91bFT1ghd72KkzNK_SYl1FfgyFg7elp78lJbhTYPhtqIfoO2L84zNGEBojA0fuSJGDX9nY7v8ltiGaYCwLxH56DS_0C-3YWJGqo3jNxpTbC8iqGXHZslX42Hdgcxqi0tCwmO3gUHLkI7TrwqOZxDfKKj0nDQAYQ', // required
       collapse_key: "1314", 
       "data.trainId": "1314",
       "data.type": "delayed", // delayed /cancelled

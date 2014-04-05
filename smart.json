@@ -5,6 +5,7 @@
     "npm": {},
     "select2-bootstrap3-css": {},
     "collection-api": {},
-    "accounts-ui-bootstrap-3": {}
+    "accounts-ui-bootstrap-3": {},
+    "chosen-package": {}
   }
 }
