@@ -1,5 +1,5 @@
 <Template name="list">
-<!-- Grid System -->
+  <!-- Grid System -->
   <div class="row">
     <!-- col 8  -->
     <div class="col-md-8">
@@ -19,7 +19,7 @@
                 <!-- Select Train Start -->
                 <select id="selectstart" data-placeholder="Select Start..." class="chosen-select crowd-select-train-start" tabindex="-1">
                   {{#each stationsList}}
-                    <option value="{{stationCode}}">{{stationName}}</option>
+                  <option value="{{stationCode}}">{{stationName}}</option>
                   {{/each}}
                 </select>
                 <!-- End of Select Train Start -->
@@ -33,7 +33,7 @@
                 <!-- Select  Destination -->
                 <select id="selectdestination" data-placeholder="Select Destination..." class="chosen-select crowd-select-train-start" tabindex="-1">
                   {{#each stationsList}}
-                    <option value="{{stationCode}}">{{stationName}}</option>
+                  <option value="{{stationCode}}">{{stationName}}</option>
                   {{/each}}
                 </select>
                 <!-- End of select destination -->
@@ -91,39 +91,54 @@
     </div>
     <!-- end of col4 -->
   </div>
-  
-  <div class="col-md-12">
-  <table>
-    <thead>
-      <tr>
-        <td>Train No.</td>
-        <td>From</td>
-        <td>To</td>
-        <td>Frequency</td>
-        <td>Type</td>
-        <td>Arrival At Station</td>
-        <td>Departure From Station</td>
-        <td>Estimated Arrival Time At Destination</td>
-      </tr>
-    </thead>
-    <tbody>
-      {{#each scheduleList}}
-          <tr>
-            <td>{{name}}</td>
-            <td>{{startStationName}}</td>
-            <td>{{endStationName}}</td>
-            <td>{{fDescription}}</td>
-            <td>{{tyDescription}}</td>
-            <td>{{arrivalTime}}</td>
-            <td>{{depatureTime}}</td>
-            <td>{{arrivalAtDestinationTime}}</td>
-          </tr>
-      {{else}}
-        <div class='error message'>No Records Found !</div>
-      {{/each}}
-    </tbody>
-  </table>
+  <div class="row">
+    <div class="col-md-8">
+
+  <!-- Schedule Result Table Panel -->
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">Search Results</h3>
+      </div>
+      <!-- panel body -->
+      <div class="panel-body crowd-notify-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>Train No.</td>
+              <td>From</td>
+              <td>To</td>
+              <td>Frequency</td>
+              <td>Type</td>
+              <td>Arrival At Station</td>
+              <td>Departure From Station</td>
+              <td>Estimated Arrival Time At Destination</td>
+            </tr>
+          </thead>
+          <tbody>
+            {{#each scheduleList}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{startStationName}}</td>
+              <td>{{endStationName}}</td>
+              <td>{{fDescription}}</td>
+              <td>{{tyDescription}}</td>
+              <td>{{arrivalTime}}</td>
+              <td>{{depatureTime}}</td>
+              <td>{{arrivalAtDestinationTime}}</td>
+            </tr>
+            {{else}}
+            <div class='error message'>No Records Found !</div>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div> 
+    
   </div>
+ 
   <!-- end of grid -->
 
 
