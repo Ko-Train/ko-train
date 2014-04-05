@@ -15,3 +15,11 @@ Router.map(function() {
     template:'schedule',
   });
 });
+
+Router.map(function() {
+  this.route('list',{
+    path:'/list',
+    layoutTemplate:"home",
+    template:'list',
+  });
+});
