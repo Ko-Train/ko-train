@@ -50,5 +50,6 @@ Meteor.methods({
       {name: "AKBOPURA", code:"APR"}
     ]
     return result;
-  }
+  },
+  "BroadCastGCMMessage": BroadCastGCMMessage
 });
