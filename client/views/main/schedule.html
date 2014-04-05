@@ -34,6 +34,8 @@
                 <select id="selectdestination" data-placeholder="Select Destination..." class="chosen-select crowd-select-train-start" tabindex="-1">
                   {{#each stationsList}}
                     <option value="{{stationCode}}">{{stationName}}</option>
+                  }
+                  }
                   {{/each}}
                 </select>
                 <!-- End of select destination -->
@@ -75,6 +77,14 @@
         </div>
         <!-- panel body -->
         <div class="panel-body crowd-notify-scroll">
+                  {{#each trainList}}
+                    {{#if isdelayed}}
+                      {{name}} from {{startStationName}} to {{endStationName}} is delayed by {{delayedTime}} minutes<br>
+                    {{/if}}
+                    {{#unless isdelayed}}
+                      {{name}} from {{startStationName}} to {{endStationName}} will arrive on time at {{arrivalTime}}<br>
+                    {{/unless}}
+                  {{/each}}
           <div class="alert alert-success alert-dismissable">
             <strong><span class="crowd-notify-train">Train #1</span></strong>will be arrived within 10 mintues <a href="#" class="alert-link">this important alert message</a>.
           </div>
