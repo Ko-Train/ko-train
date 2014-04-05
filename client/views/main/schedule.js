@@ -1,5 +1,6 @@
 Meteor.startup(function(){
   Meteor.call("getAllStations", function(err, result){
+    //console.log(result);
     Session.set('stations', result);
   });
 });
