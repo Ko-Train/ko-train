@@ -10,9 +10,9 @@ BroadCastGCMMessage = function(message){
       collapse_key: "1314", 
       'data': {
         trainId: "1314",
-        type: "delayed", //delayed/cancelled
-        trainName: "Matara - colombo",
-        delayTime:"15 mins"
+        type: "delayed", // delayed /cancelled
+        trainDesc: "Matara - colombo",
+        delayTime:"15"
       }
   };
 
