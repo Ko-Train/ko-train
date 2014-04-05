@@ -33,6 +33,7 @@ Meteor.methods({
 
           if (row && row.stationName.trim() != '')
           {
+            row.stationName = ToTitleCase(row.stationName);
             new_result.push(row);
           }
         });
