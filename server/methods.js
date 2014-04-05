@@ -1,55 +1,36 @@
 Meteor.methods({
   "getShedule": function (date, start, end) {
-    // var soap = Meteor.require('soap-attrib');
 
-    // var url = 'http://lankagate.gov.lk:9080/services/RailwayWebServiceV2Proxy?wsdl';
-    // var args = {name: 'value'};
-    // soap.createClient(url, function(err, client) {
-    //   console.log('***************', err, client)
-    //     // client.MyFunction(args, function(err, result) {
-    //     //     console.log(result);
-    //     // });
-    // });
+    var result = [];
 
-    var result = [{
-      startStationArrivalTime: 1396691573895,
-      startStationDepartureTime: 1396691573895,
-      trainStartsFrom: "AVISAWELLA",
-      trainRunsTo: "COLOMBO FORT",
-      destReachingTime: 1396691573895,
-      availableDaysInWeek: "MONDAY TO FRIDAY", 
-      trainType: "COLOMBO COMMUTER",
-      trainNo: 1023,
-    }, {
-      startStationArrivalTime: 1396691573895,
-      startStationDepartureTime: 1396691573895,
-      trainStartsFrom: "AVISAWELLA",
-      trainRunsTo: "COLOMBO FORT",
-      destReachingTime: 1396691573895,
-      availableDaysInWeek: "MONDAY TO FRIDAY", 
-      trainType: "COLOMBO COMMUTER",
-      trainNo: 1023,
-    }, 
+    var URL = 'http://m.icta.lk/services/railwayservice/getSchedule.php?';
+      URL += 'lang=en&startStationCode=FOT&endStationCode=KDT&arrivalTime=01:00:00&depatureTime=22:00:01&currentDate=2010-12-23&currentTime=06:53:00';
+    
+    var res = Meteor.http.get(URL);
+
+    if (res && res.data)
     {
-      startStationArrivalTime: 1396691573895,
-      startStationDepartureTime: 1396691573895,
-      trainStartsFrom: "AVISAWELLA",
-      trainRunsTo: "COLOMBO FORT",
-      destReachingTime: 1396691573895,
-      availableDaysInWeek: "MONDAY TO FRIDAY", 
-      trainType: "COLOMBO COMMUTER",
-      trainNo: 1023,
-    }];
+      result = res.data.trains;
+    }
+   
     return result;
   },
-  "getStationsList" : function(){
-    var result = [
-      {name: "ABANPOLA", code:"ABN"},
-      {name: "AHANGAMA", code:"ANM"},
-      {name: "AHUNGALLE", code:"AUH"},
-      {name: "AKBOPURA", code:"APR"}
-    ]
+  "getAllStations" : function() {
+    var result = [];
+    
+    try{
+      URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
+      
+      var res = Meteor.http.get(URL);
+      if (res && res.data){
+        result = res.data.stations;
+      }   
+    
+    }catch(e){
+      console.log('Error occured');
+    }
+
     return result;
   },
   "BroadCastGCMMessage": BroadCastGCMMessage
-});
+}); 
