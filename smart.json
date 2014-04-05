@@ -3,6 +3,7 @@
     "bootstrap-3": {},
     "iron-router": {},
     "accounts-ui-bootstrap-3": {},
-    "npm": {}
+    "npm": {},
+    "select2-bootstrap3-css": {}
   }
 }

@@ -41,5 +41,14 @@ Meteor.methods({
       trainNo: 1023,
     }];
     return result;
+  },
+  "getStationsList" : function(){
+    var result = [
+      {name: "ABANPOLA", code:"ABN"},
+      {name: "AHANGAMA", code:"ANM"},
+      {name: "AHUNGALLE", code:"AUH"},
+      {name: "AKBOPURA", code:"APR"}
+    ]
+    return result;
   }
 });

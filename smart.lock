@@ -5,7 +5,8 @@
       "bootstrap-3": {},
       "iron-router": {},
       "accounts-ui-bootstrap-3": {},
-      "npm": {}
+      "npm": {},
+      "select2-bootstrap3-css": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -27,6 +28,11 @@
         "git": "https://github.com/arunoda/meteor-npm.git",
         "tag": "v0.2.6",
         "commit": "177ab6118de5bf8cffb19481343d5762ff7a2aaf"
+      },
+      "select2-bootstrap3-css": {
+        "git": "https://github.com/esperadomedia/meteor-select2-bootstrap3-css.git",
+        "tag": "v0.0.5",
+        "commit": "ac0c74d4b110c4c5149f17bb33c3e9bb4f77eb88"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
