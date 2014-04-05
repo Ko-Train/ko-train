@@ -4,7 +4,7 @@ Meteor.methods({
     var d = new Date();
       
     var current_time=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
-    console.log(current_time);
+    //console.log(current_time);
     var result = [];
 
     var URL = 'http://m.icta.lk/services/railwayservice/getSchedule.php?';
@@ -21,20 +21,28 @@ Meteor.methods({
   },
   "getAllStations" : function() {
     var result = [];
-    
+    var new_result = [];
     try{
       URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
       
       var res = Meteor.http.get(URL);
       if (res && res.data){
         result = res.data.stations;
+
+        result.forEach(function(row,index) {
+
+          if (row && row.stationName.trim() != '')
+          {
+            new_result.push(row);
+          }
+        });
       }   
     
     }catch(e){
-      console.log('Error occured');6
+      console.log('Error occured');
     }
 
-    return result;
+    return new_result;
   },
   "BroadCastGCMMessage": BroadCastGCMMessage,
   "BroadcastSMS": BroadcastSMS,
