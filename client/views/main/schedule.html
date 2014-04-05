@@ -1,3 +1,98 @@
 <Template name="schedule">
-schedule goes here
+<!-- Grid System -->
+  <div class="row">
+    <!-- col 8  -->
+    <div class="col-md-8">
+      <!-- Train Schedule Panel-->
+      <div class="panel panel-success">
+        <div class="panel-heading">
+          <h3 class="panel-title">Train Info</h3>
+        </div>
+        <div class="panel-body">
+          <!-- Schedule Form Panel-->
+          <!-- Schedule Form -->
+          <form class="form-horizontal" role="form">
+            <!-- Select Start -->
+            <div class="form-group">
+              <label class="col-sm-2 control-label crowd-padding-top-2">I am At</label>
+              <div class="col-sm-10">
+                <!-- Select Train Start -->
+                <select id="selectstart" data-placeholder="Select Start..." class="chosen-select crowd-select-train-start" tabindex="-1">
+                  {{#each stationsList}}
+                    <option value="{{stationCode}}">{{stationName}}</option>
+                  {{/each}}
+                </select>
+                <!-- End of Select Train Start -->
+              </div>
+            </div>
+            <!-- Select Destination -->
+            <div class="form-group">
+              <label class="col-sm-2 control-label crowd-padding-top-2">Want to goto</label>
+              <div class="col-sm-10">
+
+                <!-- Select  Destination -->
+                <select id="selectdestination" data-placeholder="Select Destination..." class="chosen-select crowd-select-train-start" tabindex="-1">
+                  {{#each stationsList}}
+                    <option value="{{stationCode}}">{{stationName}}</option>
+                  {{/each}}
+                </select>
+                <!-- End of select destination -->
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <label class="col-sm-2 control-label crowd-padding-top-2">Date</label>
+              <div class="col-sm-10">
+                <input type="date" class="form-control" style="width:65%" id="inputDate" placeholder="Date">
+              </div>
+
+            </div>
+
+            <div class="form-group">
+              <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default"><i class="glyphicon glyphicon-search"></i> Search </button>
+              </div>
+            </div>
+
+          </form>
+          
+
+
+        </div>
+      </div>
+      <!-- End of panel train scedule -->
+
+    </div>
+    <!-- End of col8 -->
+
+    <!-- col 4 -->
+    <div class="col-md-4">
+      <!-- notification panel -->
+      <div class="panel panel-info">
+        <div class="panel-heading">
+          <h3 class="panel-title">Notifications</h3>
+        </div>
+        <!-- panel body -->
+        <div class="panel-body crowd-notify-scroll">
+          <div class="alert alert-success alert-dismissable">
+            <strong><span class="crowd-notify-train">Train #1</span></strong>will be arrived within 10 mintues <a href="#" class="alert-link">this important alert message</a>.
+          </div>
+          <div class="alert alert-warning alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <strong><span class="crowd-notify-train">Train #2</span></strong> will be delayed.
+          </div>
+          <div class="alert alert-danger alert-dismissable">
+            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+            <strong>Warning!</strong> All the trains from Colombo to Badulla Has Canceled !.
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end of col4 -->
+  </div>
+
+  <!-- end of grid -->
+
+
 </Template>
