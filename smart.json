@@ -4,8 +4,8 @@
     "iron-router": {},
     "npm": {},
     "select2-bootstrap3-css": {},
-    "collection-api": {},
     "accounts-ui-bootstrap-3": {},
-    "chosen-package": {}
+    "chosen-package": {},
+    "http-methods": {}
   }
 }
