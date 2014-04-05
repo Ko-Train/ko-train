@@ -1,10 +1,14 @@
 Meteor.methods({
   "getShedule": function (date, start, end) {
-
+    
+    var d = new Date();
+      
+    var current_time=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
+    console.log(current_time);
     var result = [];
 
     var URL = 'http://m.icta.lk/services/railwayservice/getSchedule.php?';
-      URL += 'lang=en&startStationCode=FOT&endStationCode=KDT&arrivalTime=01:00:00&depatureTime=22:00:01&currentDate=2010-12-23&currentTime=06:53:00';
+      URL += 'lang=en&startStationCode='+start+'&endStationCode='+end+'&arrivalTime=00:00:00&depatureTime=23:59:59&currentDate='+date+'&currentTime='+current_time;
     
     var res = Meteor.http.get(URL);
 
