@@ -3,9 +3,8 @@
     "bootstrap-3": {},
     "iron-router": {},
     "npm": {},
-    "select2-bootstrap3-css": {},
-    "accounts-ui-bootstrap-3": {},
     "http-methods": {},
-    "moment": {}
+    "moment": {},
+    "accounts-ui-bootstrap-3": {}
   }
 }

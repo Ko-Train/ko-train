@@ -14,6 +14,11 @@ Router.map(function() {
     layoutTemplate:"home",
     template:'schedule',
   });
+
+  this.route('train', {
+    path: '/train/:_id',
+    template: 'train'
+  });
 });
 
 Router.map(function() {
