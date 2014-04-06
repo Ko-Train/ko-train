@@ -119,3 +119,13 @@ body{
 margin-top: 10px;
 margin-left: 2px;
 }
+.table-th-padding td, th {
+padding: 10px;
+
+}
+
+.table-th-padding th{
+font-size: 12px;
+vertical-align: top !important;
+padding: 15px;
+}

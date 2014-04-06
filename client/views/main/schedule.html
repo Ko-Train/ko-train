@@ -63,18 +63,18 @@
         <!-- panel body -->
         <div class="panel-body crowd-notify-scroll">
   
-    <table class="footable">
+    <table class="footable table-th-padding">
           <thead>
             <tr>
               <!-- <th class="footable-visible footable-first-column">Train No.</th> -->
               <th>From</th>
               <th>To</th>
               <th data-hide="phone" class="footable-visible footable-first-column">Frequency</th>
-              <th data-hide="phone" class="footable-visible">Type</th>
-              <th data-hide="phone" class="footable-visible">Arrival At Station</th>
-              <th data-hide="phone" class="footable-visible">Departure From Station</th>
+            
+              <th data-hide="phone" class="footable-visible">Arrival</th>
+              <th data-hide="phone" class="footable-visible">Departure</th>
               {{#if currentUser}}
-                <th data-hide="phone" class="footable-visible">Estimated Arrival Time At Destination</th>
+            
                 <th data-hide="phone,tablet" class="footable-visible footable-last-column"></th> 
               {{/if}}
             </tr>
@@ -83,15 +83,16 @@
             {{#each scheduleList}}
             <tr>
               <!-- <td>{{name}}</td> -->
+              
               <td>{{startStationName}}</td>
               <td>{{endStationName}}</td>
               <td>{{fDescription}}</td>
-              <td>{{tyDescription}}</td>
+            
               <td>{{arrivalTime}}</td>
               <td>{{depatureTime}}</td>
              
                              {{#if currentUser}}
-                              <td>{{arrivalAtDestinationTime}}</td>
+                             
                 <td><button href="#" class="btn report-delay" >Report a Delay</button></td>
                 {{/if}}
             </tr>
