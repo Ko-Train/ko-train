@@ -84,6 +84,58 @@
     <!-- end of col4 -->
   </div>
 
+    <div class="row">
+    <div class="col-md-8">
+
+  <!-- Schedule Result Table Panel -->
+    <div class="panel panel-success">
+      <div class="panel-heading">
+        <h3 class="panel-title">Search Results</h3>
+      </div>
+      <!-- panel body -->
+      <div class="panel-body crowd-notify-scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <td>From</td>
+              <td>To</td>
+              <td>Frequency</td>
+              <td>Type</td>
+              <td>Arrival At Station</td>
+              <td>Departure From Station</td>
+              <td>Estimated Arrival Time At Destination</td>
+              {{#if currentUser}}
+              <td></td>
+              {{/if}}
+            </tr>
+          </thead>
+          <tbody>
+            {{#each scheduleList}}
+            <tr>
+              <td>{{startStationName}}</td>
+              <td>{{endStationName}}</td>
+              <td>{{fDescription}}</td>
+              <td>{{tyDescription}}</td>
+              <td>{{arrivalTime}}</td>
+              <td>{{depatureTime}}</td>
+              <td>{{arrivalAtDestinationTime}}</td>
+              {{#if currentUser}}
+              <td><button href="#" class="btn report-delay" >Report a Delay</button></td>
+              {{/if}}
+            </tr>
+            {{else}}
+            <div class='error message'>No Records Found !</div>
+            {{/each}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+
+  </div> 
+    
+  </div>
+
   <!-- end of grid -->
 
 

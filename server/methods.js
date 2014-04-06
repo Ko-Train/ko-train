@@ -1,8 +1,8 @@
 Meteor.methods({
-  "getShedule": function (date, start, end) {
-    
-    var d = new Date();
-      
+  "getShedule": function (timestamp, start, end) {
+    // var d = new Date(date);
+    var date = moment(timestamp).format("MM-DD-YYYY")
+    var d = new Date(timestamp)
     var current_time=d.getHours()+':'+d.getMinutes()+':'+d.getSeconds();
     //console.log(current_time);
     var result = [];

@@ -13,12 +13,16 @@ Template.schedule.stationsList = stations;
 
 Template.list.stationsList = stations;
 
-Template.list.scheduleList = function () {
-  return Session.get('items');
+Template.schedule.scheduleList = function () {
+  return Session.get('schedule');
 } 
 //Schedule 
 Template.schedule.rendered = function(){
 
+}
+
+Template.schedule.isSelected = function(){
+  return this.name == Session.get('selectedTrain')
 }
 
 Template.schedule.events({
@@ -26,26 +30,40 @@ Template.schedule.events({
     e.preventDefault();
     var start = $('#selectstart').val();
     var end = $('#selectdestination').val();
-    var date = new Date();
+    var date = new Date().getTime();
     Meteor.call("getShedule", date, start, end, function(err, result){
-      console.log(err, result)
+      Session.set("schedule", result)
     });
     return false;
+  }, "click .report-delay": function (e) {
+      e.preventDefault();
+      var html = $('#report-form').html();
+      Session.set('selectedTrain', this.name);
+
+        var reportDialog = bootbox.dialog({
+          message: html,
+          title: "Report a Train Delay",
+          buttons: {
+            cancel: {
+              label: "Close",
+              className: "btn-default",
+              callback: function() {
+
+              }
+            },
+            success: {
+              label: "Save",
+              className: "btn-primary",
+              callback: function() {
+                var train = Session.get('selectedTrain');
+                var delayedBy = $('#delayed-mins').val();
+                Delays.insert({trainId: train, delayedBy: delayedBy, delayedType: "delayed"}, function(err, result){
+                  console.log(result)
+                });
+              }
+            }
+          }
+        });
+    return false
   }
 });
-
-// List
-Template.list.events({
-  "submit #form-search": function(e){
-    e.preventDefault();
-    var start = $('#selectstart').val();
-    var end = $('#selectdestination').val();
-    var date = $('#inputDate').val();
-    Meteor.call("getShedule", date, start, end, function(err, result){
-      console.log(err, result);
-      Session.set('items', result);
-    });
-    return false;
-  }
-});
-

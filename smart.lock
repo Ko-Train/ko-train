@@ -7,7 +7,8 @@
       "npm": {},
       "select2-bootstrap3-css": {},
       "accounts-ui-bootstrap-3": {},
-      "http-methods": {}
+      "http-methods": {},
+      "moment": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -39,6 +40,11 @@
         "git": "https://github.com/CollectionFS/Meteor-http-methods.git",
         "tag": "v0.0.22",
         "commit": "5b0f7723f49436b8a0a930f284ed05f0b26021fe"
+      },
+      "moment": {
+        "git": "https://github.com/acreeger/meteor-moment.git",
+        "tag": "v2.5.1",
+        "commit": "8c9bc5d3fc96705057737cb9743d555417f6e551"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",

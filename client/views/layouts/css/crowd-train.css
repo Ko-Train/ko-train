@@ -21,10 +21,11 @@ body{
 	margin-bottom:5px !important;
 }
 
-.crowd-notify-scroll {
-height: 203px;
-overflow-y: auto;
+.crowd-notify-scroll{
+
+	height: 430px;overflow-y:auto;
 }
+
 .crowd-jumbotron-background{
 
 	background-color: #19191A;

@@ -5,6 +5,7 @@
     "npm": {},
     "select2-bootstrap3-css": {},
     "accounts-ui-bootstrap-3": {},
-    "http-methods": {}
+    "http-methods": {},
+    "moment": {}
   }
 }
