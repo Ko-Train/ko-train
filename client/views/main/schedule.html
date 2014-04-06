@@ -62,19 +62,23 @@
         </div>
         <!-- panel body -->
         <div class="panel-body crowd-notify-scroll">
-          <table class="table">
+          <table class="footable">
             <thead>
               <tr>
-                <td>From</td>
-                <td>To</td>
-                <td>Frequency</td>
-                <td>Type</td>
-                <td>Arrival At Station</td>
-                <td>Departure From Station</td>
-                <td>Estimated Arrival Time At Destination</td>
+                <th class="footable-visible footable-first-column">From</th>
+                <th class="footable-visible">To</th>
+                <th data-hide="phone" class="footable-visible">Frequency</th>
+                <th data-hide="phone" class="footable-visible">Type</th>
+                <th data-hide="phone" class="footable-visible">Arrival At Station</th>
+                <th data-hide="phone" class="footable-visible">Departure From Station</th>
+                <th data-hide="phone" class="footable-visible">Estimated Arrival Time At Destination</th>
                 {{#if currentUser}}
-                <td></td>
+                <th data-hide="phone" class="footable-visible">Estimated Arrival Time At Destination</th>
+                <th data-hide="phone" class="footable-visible footable-last-column"></th>
+                {{else}}
+         
                 {{/if}}
+                       <th data-hide="phone" class="footable-visible footable-last-column">Estimated Arrival Time At Destination</th>
               </tr>
             </thead>
             <tbody>

@@ -75,3 +75,7 @@ Template.schedule.events({
     return false
   }
 });
+
+Template.schedule.rendered = function() {
+  $('.footable').footable();
+}
