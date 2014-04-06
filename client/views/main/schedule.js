@@ -11,11 +11,7 @@ var stations =  function () {
 
 Template.schedule.stationsList = stations;
 
-Template.list.stationsList = stations;
 
-Template.list.scheduleList = function () {
-  return Session.get('items');
-} 
 //Schedule 
 Template.schedule.rendered = function(){
   $("#selectstart").chosen({width: "65%"});
@@ -34,19 +30,3 @@ Template.schedule.events({
     return false;
   }
 });
-
-// List
-Template.list.events({
-  "submit #form-search": function(e){
-    e.preventDefault();
-    var start = $('#selectstart').val();
-    var end = $('#selectdestination').val();
-    var date = $('#inputDate').val();
-    Meteor.call("getShedule", date, start, end, function(err, result){
-      console.log(err, result);
-      Session.set('items', result);
-    });
-    return false;
-  }
-});
-
