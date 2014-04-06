@@ -3,15 +3,11 @@ Config = {
 	'sms_gateway_password':'hackone'
 };
 
-
-// API
 HTTP.methods({
   '/collectionapi/androidsubs': {
     method: function(data) {
-      var id = data.registrationId;
-      if(id){
-        console.log(id)
-        Androidsubs.insert({registrationId: id});
+      if(this && this.query && this.query.registrationId){
+        Androidsubs.insert({registrationId: this.query.registrationId});
       }
     },
   }

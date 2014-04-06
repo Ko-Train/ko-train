@@ -14,8 +14,7 @@ Template.schedule.stationsList = stations;
 
 //Schedule 
 Template.schedule.rendered = function(){
-  $("#selectstart").chosen({width: "65%"});
-  $("#selectdestination").chosen({width: "65%"});
+
 }
 
 Template.schedule.events({
