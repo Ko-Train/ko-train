@@ -11,11 +11,11 @@ var stations =  function () {
 
 Template.schedule.stationsList = stations;
 
-Template.list.stationsList = stations;
 
 Template.schedule.scheduleList = function () {
   return Session.get('schedule');
 } 
+
 //Schedule 
 Template.schedule.rendered = function(){
 
