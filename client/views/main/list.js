@@ -12,6 +12,10 @@ Template.list.error = function () {
   return Session.get('flash');
 }
 
+Template.list.notifications = function(){
+  return Delays.find();
+}
+
 // List
 Template.list.events({
   "submit #form-search": function(e){
