@@ -25,6 +25,12 @@ Template.schedule.isSelected = function(){
   return this.name == Session.get('selectedTrain')
 }
 
+
+Template.schedule.notifications = function(){
+  return Delays.find();
+}
+
+
 Template.schedule.events({
   "submit #form-search": function(e){
     e.preventDefault();

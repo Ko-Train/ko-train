@@ -112,17 +112,13 @@
         </div>
         <!-- panel body -->
         <div class="panel-body crowd-notify-scroll">
+          {{#each notifications}}
           <div class="alert alert-success alert-dismissable">
-            <strong><span class="crowd-notify-train">Train #1</span></strong>will be arrived within 10 mintues <a href="#" class="alert-link">this important alert message</a>.
-          </div>
-          <div class="alert alert-warning alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <strong><span class="crowd-notify-train">Train #2</span></strong> will be delayed.
-          </div>
-          <div class="alert alert-danger alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
-            <strong>Warning!</strong> All the trains from Colombo to Badulla Has Canceled !.
-          </div>
+            <strong><span class="crowd-notify-train">{{ delay.name }}</span></strong> {{delay.depatureTime}} {{delay.toTrStationName}} train will be {{ delay.delayedBy }} minutes late today
+           </div>  
+          {{else}}
+            No notifications as yet.
+          {{/each}}
         </div>
       </div>
     </div>
