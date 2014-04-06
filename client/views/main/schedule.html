@@ -66,23 +66,23 @@
     <table class="footable">
           <thead>
             <tr>
-              <th class="footable-visible footable-first-column">Train No.</th>
+              <!-- <th class="footable-visible footable-first-column">Train No.</th> -->
               <th>From</th>
               <th>To</th>
-              <th data-hide="phone" class="footable-visible">Frequency</th>
+              <th data-hide="phone" class="footable-visible footable-first-column">Frequency</th>
               <th data-hide="phone" class="footable-visible">Type</th>
               <th data-hide="phone" class="footable-visible">Arrival At Station</th>
               <th data-hide="phone" class="footable-visible">Departure From Station</th>
               {{#if currentUser}}
                 <th data-hide="phone" class="footable-visible">Estimated Arrival Time At Destination</th>
-                <th data-hide="phone" class="footable-visible footable-last-column"></th> 
+                <th data-hide="phone,tablet" class="footable-visible footable-last-column"></th> 
               {{/if}}
             </tr>
           </thead>
           <tbody>
             {{#each scheduleList}}
             <tr>
-              <td>{{name}}</td>
+              <!-- <td>{{name}}</td> -->
               <td>{{startStationName}}</td>
               <td>{{endStationName}}</td>
               <td>{{fDescription}}</td>
