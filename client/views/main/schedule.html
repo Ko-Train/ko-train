@@ -62,41 +62,44 @@
         </div>
         <!-- panel body -->
         <div class="panel-body crowd-notify-scroll">
-          <table class="table">
-            <thead>
-              <tr>
-                <td>From</td>
-                <td>To</td>
-                <td>Frequency</td>
-                <td>Type</td>
-                <td>Arrival At Station</td>
-                <td>Departure From Station</td>
-                <td>Estimated Arrival Time At Destination</td>
-                {{#if currentUser}}
-                <td></td>
-                {{/if}}
-              </tr>
-            </thead>
-            <tbody>
-              {{#each scheduleList}}
-              <tr>
-                <td>{{startStationName}}</td>
-                <td>{{endStationName}}</td>
-                <td>{{fDescription}}</td>
-                <td>{{tyDescription}}</td>
-                <td>{{arrivalTime}}</td>
-                <td>{{depatureTime}}</td>
-                <td>{{arrivalAtDestinationTime}}</td>
-                {{#if currentUser}}
+  
+    <table class="footable">
+          <thead>
+            <tr>
+              <th class="footable-visible footable-first-column">Train No.</th>
+              <th>From</th>
+              <th>To</th>
+              <th data-hide="phone" class="footable-visible">Frequency</th>
+              <th data-hide="phone" class="footable-visible">Type</th>
+              <th data-hide="phone" class="footable-visible">Arrival At Station</th>
+              <th data-hide="phone" class="footable-visible">Departure From Station</th>
+              {{#if currentUser}}
+                <th data-hide="phone" class="footable-visible">Estimated Arrival Time At Destination</th>
+                <th data-hide="phone" class="footable-visible footable-last-column"></th> 
+              {{/if}}
+            </tr>
+          </thead>
+          <tbody>
+            {{#each scheduleList}}
+            <tr>
+              <td>{{name}}</td>
+              <td>{{startStationName}}</td>
+              <td>{{endStationName}}</td>
+              <td>{{fDescription}}</td>
+              <td>{{tyDescription}}</td>
+              <td>{{arrivalTime}}</td>
+              <td>{{depatureTime}}</td>
+             
+                             {{#if currentUser}}
+                              <td>{{arrivalAtDestinationTime}}</td>
                 <td><button href="#" class="btn report-delay" >Report a Delay</button></td>
                 {{/if}}
-              </tr>
-              {{else}}
-             
-              {{/each}}
-            </tbody>
-          </table>
-           <div class='alert alert-danger'>No Records Found !</div>
+            </tr>
+            
+            {{/each}}
+          </tbody>
+        </table>   
+          <!--  <div class='alert alert-danger'>No Records Found !</div> -->
         </div>
       </div>
 
