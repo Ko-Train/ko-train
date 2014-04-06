@@ -10,4 +10,18 @@ Delays.allow({
   update: function(){
     return true;
   }
+});
+
+
+Meteor.publish('userPhones',function(){
+  return UserPhones.find();
+});
+
+UserPhones.allow({
+  insert: function (userId, phone) {
+    return true;
+  },
+  update: function(){
+    return true;
+  }
 })

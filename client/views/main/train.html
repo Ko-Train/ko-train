@@ -7,8 +7,11 @@
         <div class="panel-body crowd-notify-scroll">
               
           {{#with trainInfo}}
-            
-
+          <div class="alert alert-success alert-dismissable">
+             {{depatureTime}} {{toTrStationName}} train will be {{ delayedBy }} minutes late today
+           </div>  
+          {{else}}
+            No notifications as yet.
           {{/with}}
         </div>
       </div>
