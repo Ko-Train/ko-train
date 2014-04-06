@@ -3,6 +3,7 @@ Router.configure({
   waitOn: [
   function(){
     this.subscribe('delays');
+    this.subscribe('userPhones')
   }
   ]
 });
