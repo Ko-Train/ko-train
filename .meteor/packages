@@ -10,7 +10,6 @@ accounts-facebook
 accounts-twitter
 npm
 select2-bootstrap3-css
-accounts-google
-accounts-ui-bootstrap-3
 http-methods
 moment
+accounts-ui-bootstrap-3
