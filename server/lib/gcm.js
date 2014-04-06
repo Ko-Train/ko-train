@@ -1,6 +1,4 @@
-BroadCastGCMMessage = function(message){
-  this.unblock();
-
+BroadCastGCMMessage = function(delay){
   var GCM = Meteor.require('gcm').GCM;
 
   var apiKey = 'AIzaSyA_iYqv4it9XSNm5f_fLY_rMbI1etPnETs';
@@ -15,10 +13,10 @@ BroadCastGCMMessage = function(message){
   var message = {
       registration_id: regIds, // required
       collapse_key: "1314", 
-      "data.trainId": "1314",
+      "data.trainId": delay.name,
       "data.type": "delayed", // delayed /cancelled
-      "data.trainDesc": "Matara - colombo",
-      "data.delayTime":"15"
+      "data.trainDesc": delay.depatureTime + " " + delay.toTrStationName,
+      "data.delayTime": delay.delayedBy
   };
 
   gcm.send(message, function(err, messageId){

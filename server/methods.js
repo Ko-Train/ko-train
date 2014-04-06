@@ -45,6 +45,10 @@ Meteor.methods({
 
     return new_result;
   },
-  "BroadCastGCMMessage": BroadCastGCMMessage,
-  "BroadcastSMS": BroadcastSMS,
+  "SendBroadCastMSG": function(delay){
+    this.unblock();
+    BroadCastGCMMessage(delay);
+    var message = delay.depatureTime+" " + delay.toTrStationName + " train will be "+ delay.delayedBy + " minutes late today"
+    BroadcastSMS(message, "+94713318498");
+  }
 }); 

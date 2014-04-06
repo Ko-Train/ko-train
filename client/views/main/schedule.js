@@ -38,7 +38,7 @@ Template.schedule.events({
   }, "click .report-delay": function (e) {
       e.preventDefault();
       var html = $('#report-form').html();
-      Session.set('selectedTrain', this.name);
+      Session.set('selectedTrain', this);
 
         var reportDialog = bootbox.dialog({
           message: html,
@@ -56,9 +56,11 @@ Template.schedule.events({
               className: "btn-primary",
               callback: function() {
                 var train = Session.get('selectedTrain');
-                var delayedBy = $('#delayed-mins').val();
-                Delays.insert({trainId: train, delayedBy: delayedBy, delayedType: "delayed"}, function(err, result){
-                  console.log(result)
+                train.delayedBy = $('#delayed-mins').val();
+                train.delayedType = "delayed";
+                delete train._id;
+                Delays.insert(train, function(err, result){
+                  console.log(err, result)
                 });
               }
             }
