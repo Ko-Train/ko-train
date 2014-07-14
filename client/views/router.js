@@ -2,8 +2,10 @@ Router.configure({
   layoutTemplate: 'home',
   waitOn: [
   function(){
-    this.subscribe('delays');
-    this.subscribe('userPhones')
+    return [this.subscribe('delays'),
+    this.subscribe('userPhones'),
+    this.subscribe('stations')
+    ]
   }
   ]
 });

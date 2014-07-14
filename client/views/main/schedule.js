@@ -1,15 +1,6 @@
-Meteor.startup(function(){
-  Meteor.call("getAllStations", function(err, result){
-    //console.log(result);
-    Session.set('stations', result);
-  });
-});
-
-var stations =  function () {
-  return Session.get('stations');
-}
-
-Template.schedule.stationsList = stations;
+Template.schedule.stationsList = function(){
+  return Stations.find();
+};
 
 
 Template.schedule.scheduleList = function () {

@@ -25,3 +25,7 @@ UserPhones.allow({
     return true;
   }
 })
+
+Meteor.publish('stations', function () {
+  return Stations.find({});
+});
