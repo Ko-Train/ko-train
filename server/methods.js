@@ -23,21 +23,28 @@ Meteor.methods({
     var result = [];
     var new_result = [];
     try{
-      URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
-      
-      var res = Meteor.http.get(URL);
-      if (res && res.data){
-        result = res.data.stations;
+      if(Stations.find().count() == 0){
+        var URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
 
-        result.forEach(function(row,index) {
+        
+        var res = Meteor.http.get(URL);
+        if (res && res.data){
+          result = res.data.stations;
 
-          if (row && row.stationName.trim() != '')
-          {
-            row.stationName = ToTitleCase(row.stationName);
-            new_result.push(row);
-          }
-        });
-      }   
+          result.forEach(function(row,index) {
+
+            if (row && row.stationName.trim() != '')
+            {
+              row.stationName = ToTitleCase(row.stationName);
+
+              Stations.insert({
+                _id: row.stationCode,
+                stationName: row.stationName
+              });
+            }
+          });
+        }
+      }
     
     }catch(e){
       console.log('Error occured');
