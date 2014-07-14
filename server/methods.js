@@ -19,14 +19,21 @@ Meteor.methods({
    
     return result;
   },
-  "getAllStations" : function() {
+  "SendBroadCastMSG": function(delay){
+    this.unblock();
+    BroadCastGCMMessage(delay);
+    var message = delay.depatureTime+" " + delay.toTrStationName + " train will be "+ delay.delayedBy + " minutes late today"
+    BroadcastSMS(message, "+94713318498");
+  }
+}); 
+
+
+Meteor.startup( function() {
     var result = [];
     var new_result = [];
     try{
       if(Stations.find().count() == 0){
         var URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
-
-        
         var res = Meteor.http.get(URL);
         if (res && res.data){
           result = res.data.stations;
@@ -49,13 +56,5 @@ Meteor.methods({
     }catch(e){
       console.log('Error occured');
     }
-
     return new_result;
-  },
-  "SendBroadCastMSG": function(delay){
-    this.unblock();
-    BroadCastGCMMessage(delay);
-    var message = delay.depatureTime+" " + delay.toTrStationName + " train will be "+ delay.delayedBy + " minutes late today"
-    BroadcastSMS(message, "+94713318498");
-  }
-}); 
+});
