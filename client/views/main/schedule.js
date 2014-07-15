@@ -7,11 +7,6 @@ Template.schedule.scheduleList = function () {
   return Session.get('schedule');
 } 
 
-//Schedule 
-Template.schedule.rendered = function(){
-
-}
-
 Template.schedule.isSelected = function(){
   return this.name == Session.get('selectedTrain')
 }
@@ -69,4 +64,6 @@ Template.schedule.events({
 
 Template.schedule.rendered = function() {
   $('.footable').footable();
+  $('#selectstart').select2();
+  $('#selectdestination').select2();
 }

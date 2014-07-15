@@ -102,7 +102,6 @@ body{
 }
 
 .crowd-font-color-white{
-
 	color:#fff
 }
 
@@ -128,4 +127,7 @@ padding: 10px;
 font-size: 12px;
 vertical-align: top !important;
 padding: 15px;
+}
+.select2-container.crowd-select-train-start,.select2-container.selectdestination {
+	width: 190px;
 }
