@@ -19,32 +19,6 @@ Meteor.methods({
    
     return result;
   },
-  "getAllStations" : function() {
-    var result = [];
-    var new_result = [];
-    try{
-      URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
-      
-      var res = Meteor.http.get(URL);
-      if (res && res.data){
-        result = res.data.stations;
-
-        result.forEach(function(row,index) {
-
-          if (row && row.stationName.trim() != '')
-          {
-            row.stationName = ToTitleCase(row.stationName);
-            new_result.push(row);
-          }
-        });
-      }   
-    
-    }catch(e){
-      console.log('Error occured');
-    }
-
-    return new_result;
-  },
   "SendBroadCastMSG": function(delay){
     this.unblock();
     BroadCastGCMMessage(delay);
@@ -52,3 +26,35 @@ Meteor.methods({
     BroadcastSMS(message, "+94713318498");
   }
 }); 
+
+
+Meteor.startup( function() {
+    var result = [];
+    var new_result = [];
+    try{
+      if(Stations.find().count() == 0){
+        var URL = 'http://m.icta.lk/services/railwayservice/getAllStations.php?lang=en';
+        var res = Meteor.http.get(URL);
+        if (res && res.data){
+          result = res.data.stations;
+
+          result.forEach(function(row,index) {
+
+            if (row && row.stationName.trim() != '')
+            {
+              row.stationName = ToTitleCase(row.stationName);
+
+              Stations.insert({
+                _id: row.stationCode,
+                stationName: row.stationName
+              });
+            }
+          });
+        }
+      }
+    
+    }catch(e){
+      console.log('Error occured');
+    }
+    return new_result;
+});
