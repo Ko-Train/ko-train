@@ -6,6 +6,8 @@
     "http-methods": {},
     "moment": {},
     "accounts-ui-bootstrap-3": {},
-    "footable": {}
+    "footable": {},
+    "fast-render": {},
+    "select2": {}
   }
 }
