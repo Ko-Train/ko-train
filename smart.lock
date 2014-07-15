@@ -8,7 +8,8 @@
       "http-methods": {},
       "moment": {},
       "accounts-ui-bootstrap-3": {},
-      "footable": {}
+      "footable": {},
+      "fast-render": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -45,6 +46,11 @@
         "git": "https://github.com/weits/meteor-footable.git",
         "tag": "v2.0.1-4.4",
         "commit": "505fc083033342e92bece07fdbee4685fbc8db37"
+      },
+      "fast-render": {
+        "git": "https://github.com/arunoda/meteor-fast-render.git",
+        "tag": "v0.2.8",
+        "commit": "149984b1aff3a5642a270aff9bd9006872c8302e"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
