@@ -24,7 +24,7 @@ Template.schedule.events({
     var date = new Date().getTime();
     NProgress.start();
     Meteor.call("getShedule", date, start, end, function(err, result){
-      console.log(result)
+      // console.log(result)
       if(!err && result){
         result.forEach(function (train) {
           var delayedTrain = Delays.findOne({name: train.name});
@@ -69,7 +69,7 @@ Template.schedule.events({
                 train.delayedType = "delayed";
                 delete train._id;
                 Delays.insert(train, function(err, result){
-                  console.log(err, result)
+                  // console.log(err, result)
                 });
               }
             }
