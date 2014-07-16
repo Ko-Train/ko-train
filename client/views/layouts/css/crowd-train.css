@@ -132,3 +132,6 @@ padding: 15px;
 #empty-shedule{
 	display: none;
 }
+.select2-container.crowd-select-train-start,.select2-container.selectdestination {
+ 	width: 190px;
+ }

@@ -10,7 +10,8 @@
       "accounts-ui-bootstrap-3": {},
       "footable": {},
       "fast-render": {},
-      "auto-nprogress": {}
+      "auto-nprogress": {},
+      "select2": {}
     },
     "packages": {
       "bootstrap-3": {
@@ -57,6 +58,11 @@
         "git": "https://github.com/settinghead/meteor-auto-nprogress.git",
         "tag": "v0.2.7",
         "commit": "3fa87d5244e140cc5b49696585cd23b110c36467"
+      },
+      "select2": {
+        "git": "https://github.com/nate-strauser/meteor-select2.git",
+        "tag": "v3.4.5",
+        "commit": "4a8d05582b949a14f0ee217c185166abbf112822"
       },
       "blaze-layout": {
         "git": "https://github.com/EventedMind/blaze-layout.git",
