@@ -28,8 +28,17 @@ Template.schedule.events({
     var start = $('#selectstart').val();
     var end = $('#selectdestination').val();
     var date = new Date().getTime();
+    NProgress.start();
     Meteor.call("getShedule", date, start, end, function(err, result){
       Session.set("schedule", result)
+      if(result.length == 0){
+        $('#empty-shedule').show();
+        $('#empty-query').hide();
+      } else{
+        $('#empty-shedule').hide();
+        $('#empty-query').hide();
+      }
+      NProgress.done()
     });
     return false;
   }, "click .report-delay": function (e) {

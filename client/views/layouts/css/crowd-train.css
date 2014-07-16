@@ -129,3 +129,6 @@ font-size: 12px;
 vertical-align: top !important;
 padding: 15px;
 }
+#empty-shedule{
+	display: none;
+}
