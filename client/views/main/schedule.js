@@ -34,6 +34,9 @@ Template.schedule.events({
       if(result.length == 0){
         $('#empty-shedule').show();
         $('#empty-query').hide();
+      } else{
+        $('#empty-shedule').hide();
+        $('#empty-query').hide();
       }
       NProgress.done()
     });
