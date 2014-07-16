@@ -5,11 +5,6 @@ Template.schedule.stationsList = function(){
 
 Template.schedule.scheduleList = function () {
   return Session.get('schedule');
-} 
-
-//Schedule 
-Template.schedule.rendered = function(){
-
 }
 
 Template.schedule.isSelected = function(){
@@ -21,7 +16,6 @@ Template.schedule.notifications = function(){
   return Delays.find();
 }
 
-
 Template.schedule.events({
   "submit #form-search": function(e){
     e.preventDefault();
@@ -30,6 +24,15 @@ Template.schedule.events({
     var date = new Date().getTime();
     NProgress.start();
     Meteor.call("getShedule", date, start, end, function(err, result){
+      // console.log(result)
+      if(!err && result){
+        result.forEach(function (train) {
+          var delayedTrain = Delays.findOne({name: train.name});
+          if(delayedTrain){
+            train.delayedBy = delayedTrain.delayedBy;
+          }
+        });
+      }
       Session.set("schedule", result)
       if(result.length == 0){
         $('#empty-shedule').show();
@@ -66,7 +69,7 @@ Template.schedule.events({
                 train.delayedType = "delayed";
                 delete train._id;
                 Delays.insert(train, function(err, result){
-                  console.log(err, result)
+                  // console.log(err, result)
                 });
               }
             }

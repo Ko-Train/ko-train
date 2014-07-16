@@ -69,10 +69,11 @@
               <!-- <th class="footable-visible footable-first-column">Train No.</th> -->
               <th>From</th>
               <th>To</th>
-              <th data-hide="phone" class="footable-visible footable-first-column">Frequency</th>
+              <th>Delayed</th>
             
               <th data-hide="phone" class="footable-visible">Arrival</th>
               <th data-hide="phone" class="footable-visible">Departure</th>
+              <th data-hide="phone" class="footable-visible footable-first-column">Frequency</th>
               {{#if currentUser}}
             
                 <th data-hide="phone,tablet" class="footable-visible footable-last-column"></th> 
@@ -86,10 +87,17 @@
               
               <td>{{startStationName}}</td>
               <td>{{endStationName}}</td>
-              <td>{{fDescription}}</td>
+              <th>
+                {{#if delayedBy}}
+                <b style="color:red;">{{delayedBy}}mins</b>
+                {{else}}
+                  On Time
+                {{/if}}
+              </th>
             
-              <td>{{arrivalTime}}</td>
+              <td>{{arrivalAtDestinationTime}}</td>
               <td>{{depatureTime}}</td>
+              <td>{{fDescription}}</td>
              
                              {{#if currentUser}}
                              
