@@ -81,4 +81,6 @@ Template.schedule.events({
 
 Template.schedule.rendered = function() {
   $('.footable').footable();
+  $('#selectstart').select2();
+  $('#selectdestination').select2();
 }
