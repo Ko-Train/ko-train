@@ -49,13 +49,13 @@ body{
 .crowd-intro-train-logo{
 
 	background: url('../images/crowd-train-logo.png');
-	
+
 }
 
 
 body{
 
-	background: url(../images/crowd-background.jpg) no-repeat center center fixed; 
+	background: url(../images/crowd-background.jpg) no-repeat center center fixed;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
@@ -132,6 +132,16 @@ padding: 15px;
 #empty-shedule{
 	display: none;
 }
+
 .select2-container.crowd-select-train-start,.select2-container.selectdestination {
  	width: 190px;
  }
+@media (max-width: 600px) {
+    .crowd-jumbotron-background {
+        display: none;
+    }
+
+    body{
+        background: url(../images/simple_dashed.png) repeat center center fixed;
+    }
+}
